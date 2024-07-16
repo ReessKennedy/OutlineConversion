@@ -36,4 +36,3 @@ function convertAdmonitionBlocks($filePath) {
     
     echo "Admonition blocks converted successfully.\n";
 }
-

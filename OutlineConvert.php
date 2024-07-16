@@ -7,33 +7,28 @@ Wikilinks conversion -
 */
 
 // Define the base directory
-define('BASE_DIR', '/Users/Reess/Code/ToolsNew/OutlineConvert/Actions');
+define('BASE_DIR', '/Users/Reess/Code/ToolsNew/OutlineConversion/Actions');
 
 // Include files using the base directory constant
-include(BASE_DIR . '/DeleteLineRange.php');
-include(BASE_DIR . '/DeleteBackslashes.php');
-include(BASE_DIR . '/ConvertAdmonishments.php');
-
-
+require_once(BASE_DIR . '/DeleteLineRange.php');
+require_once(BASE_DIR . '/DeleteBackslashes.php');
+require_once(BASE_DIR . '/ConvertAdmonishments.php');
 
 // Example usage:
 
+
+// Example usage:
+$filePath = __DIR__ . '/Obsidian.md';
+
 /*
 try {
-    removeLinesFromFile(__DIR__ . "/Obsidian.md", 1, 2);
+    
     echo "Lines successfully removed.\n";
 } catch (Exception $e) {
     echo "Error: " . $e->getMessage() . "\n";
 }
 */    
 
-
-
-// Example usage:
-$filePath = __DIR__ . '/Obsidian.md';
+removeLinesFromFile($filePath, 1, 2);
 removeBackslashLines($filePath);
-
-
-// Usage example
-// $filePath = __DIR__ . '/OutlineFormat.md';
-// convertAdmonitionBlocks($filePath);
+convertAdmonitionBlocks($filePath);

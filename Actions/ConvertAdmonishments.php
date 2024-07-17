@@ -1,6 +1,5 @@
 <?php
 
-
 /**
  * Function to convert ::: admonition blocks to ```ad- code blocks in a given file using a mapping array.
  *
